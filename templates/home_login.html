@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car damaged Insurance Prediction using CNN</title>
+    <class="subtitle" style="color:rgb(5, 4, 4)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <style>
+    body {
+      font-family: 'Oxygen', sans-serif;
+    }
+
+    .hero {
+      background: black url(static/images/bg.jpg) center / cover;
+      color: #fbf8f9;
+      padding: 6rem 0;
+    }
+
+    .hero h1.title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero .subsubtitle {
+      font-size: 1.5rem;
+    }
+
+    .bg-text {
+      background-color: rgba(249, 247, 247, 0.955);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .bg-text p {
+      color: rgb(28, 21, 21);
+      font-size: 1.2rem;
+    }
+
+    .bg-text .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .container.has-text-centered {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #fbf8f9;
+    }
+
+    .section-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      color: #fbf8f9;
+    }
+
+    .how-it-works {
+      margin-bottom: 4rem;
+    }
+
+    .how-it-works .col-sm-3 {
+      margin-bottom: 2rem;
+    }
+
+    .how-it-works .glyphicon {
+      font-size: 4rem;
+      color: #fbf8f9;
+      margin-bottom: 1rem;
+    }
+
+    .how-it-works h4 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fbf8f9;
+    }
+
+    .how-it-works p {
+      font-size: 1.2rem;
+      color: #fbf8f9;
+    }
+
+    footer {
+      background-color: #130e0e;
+      color: #fbf8f9;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    
+    footer p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: #fbf8f9;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      color: #2232de;
+    }
+    .file-name {
+  color: black;
+}
+
+
+    .navbar-brand {
+  font-family: 'Arial', sans-serif; /* Specify the desired font family */
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+    </style>
+
+  </head>
+
+    
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <ul class = "nav navbar-nav">
+        <a class="navbar-brand" href="#">Car Insurance</a>
+      </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar"></div>
+        <ul class="nav navbar-nav navbar-right "> <!-- Added 'navbar-right' class here -->
+          <li><a href="/home_login">HOME</a></li>
+          <li><a href="#second">HOW IT WORKS</a></li>
+          <li><a href="/damage1">INSURANCE WITH DAMAGE LEVEL</a></li>
+          <li><a href="/brand1">INSURANCE WITH BRAND</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+<!-- .hero -->
+<section class="hero is-fullheight" has-background-red>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title" style="color:rgb(247, 245, 245);">
+                Car damaged Insurance Prediction using CNN
+            </h1>
+            <p class="subsubtitle" >
+                by <strong style="color:rgb(247, 245, 245);">Python</strong> 
+            </p>
+        </div>   
+    </section> 
+    <p></p>
+    <p></p>
+
+    <section class="section">
+      <div class="container has-text-centered " >
+        <p style="color:rgb(247, 245, 245); font-size: 21px; font-family: 'Brush Script', cursive">Ensuring peace of mind for car owners with reliable insurance predictions powered by CNN.</p>
+      </div>
+    </section>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <section>
+    <div class="container-fluid bg-1 text-center" id="second">
+      <h2>How it works</h2>
+      <h4>Car Damage Detective allows you to upload a picture of your car damage to independently assess damage location and severity, easing the burden of filing an insurance claim and getting your car repaired.</h4>
+      <br>
+      <div class="row">
+        <div class="col-sm-3">
+          <span class="glyphicon glyphicon-phone logo-small"></span>
+          <h4>SNAP</h4>
+          <p>Take a picture of your car damage. For best results, try to focus on one major area of damage (e.g., front, side, or rear) and contain most of the car body in the picture.</p>
+        </div>
+        <div class="col-sm-3">
+          <span class="glyphicon glyphicon-upload logo-small"></span>
+          <h4>SUBMIT</h4>
+          <p>Upload your picture to Car Damage Detective using our handy web app and image upload capabilities. </p>
+        </div>
+        <div class="col-sm-3">
+          <span class="glyphicon glyphicon-cog logo-small"></span>
+          <h4>ASSESS</h4>
+          <p>Convolutional neural networks will identify where and how severely your car is damaged and provide an immediate assessment of your damage</p>
+        </div>
+        <div class="col-sm-3">
+          <span class="glyphicon glyphicon-file logo-small"></span>
+          <h4>RESULTS</h4>
+          <p>Results can be used to obtain a cost estimate or submit to your insurance company to expedite claims handling</p>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </section>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+
+
+    
+
+
+
+
+        <div class="level-item has-text-centered">
+            
+                <img src="static/images/download.jpeg" width=200px; height=200px; alt="Bulma: Free, open source, &amp; modern CSS framework based on Flexbox" style="max-height: 100%;">
+            </a>
+        </div>
+
+</section>
+
+
+<footer class="bg-4 text-center">
+  <a class="up-arrow" href="#top" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p style="font-size: 13px">Created by Aditya,moiz,naveen, 2024. <br>
+  <a href="b.aditya.741@gmail.com" title="Email">Email</a> | <a href="https://github.com/Adityabeecha" title="Github">Github</a> | <a href="www.linkedin.com/in/beecha-aditya-1aa27a251" title="Linkedin">Linkedin</a></p> 
+</footer>
+    <!-- /.section -->
+<!-- /.hero -->
+
+
+<script src="/static/script.js"></script>
+</body>
+</html>

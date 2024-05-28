@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car damaged Insurance Prediction using CNN</title>
+    <class="subtitle" style="color:rgb(5, 4, 4)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <style>
+    body {
+      font-family: 'Oxygen', sans-serif;
+    }
+
+    .hero {
+      background: black url(static/images/bg.jpg) center / cover;
+      color: #fbf8f9;
+      padding: 6rem 0;
+    }
+
+    .hero h1.title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero .subsubtitle {
+      font-size: 1.5rem;
+    }
+
+    .bg-text {
+      background-color: rgba(249, 247, 247, 0.955);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .bg-text p {
+      color: rgb(28, 21, 21);
+      font-size: 1.2rem;
+    }
+
+    .bg-text .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .container.has-text-centered {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #fbf8f9;
+    }
+
+    .section-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      color: #fbf8f9;
+    }
+
+    .how-it-works {
+      margin-bottom: 4rem;
+    }
+
+    .how-it-works .col-sm-3 {
+      margin-bottom: 2rem;
+    }
+
+    .how-it-works .glyphicon {
+      font-size: 4rem;
+      color: #fbf8f9;
+      margin-bottom: 1rem;
+    }
+
+    .how-it-works h4 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fbf8f9;
+    }
+
+    .how-it-works p {
+      font-size: 1.2rem;
+      color: #fbf8f9;
+    }
+
+    footer {
+      background-color: #130e0e;
+      color: #fbf8f9;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    
+    footer p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: #fbf8f9;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      color: #2232de;
+    }
+    .file-name {
+  color: black;
+}
+
+
+    .navbar-brand {
+  font-family: 'Arial', sans-serif; /* Specify the desired font family */
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+    </style>
+
+  </head>
+
+    
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <ul class = "nav navbar-nav">
+        <a class="navbar-brand" href="#">Car Insurance</a>
+      </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar"></div>
+        <ul class="nav navbar-nav navbar-right "> <!-- Added 'navbar-right' class here -->
+          <li><a href="/">HOME</a></li>
+          <li><a href="/damage">INSURANCE WITH DAMAGE LEVEL</a></li>
+          <li><a href="/brand">INSURANCE WITH BRAND</a></li>
+          <li><a href="/login">LOGIN</a></li>
+        <li><a href="/signup">SIGN UP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+<!-- .hero -->
+<section class="hero is-fullheight" has-background-red>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title" style="color:rgb(247, 245, 245);">
+                Car damaged Insurance Prediction using CNN
+            </h1>
+            <p class="subsubtitle" >
+                by <strong style="color:rgb(247, 245, 245);">Python</strong> 
+            </p>
+        </div>   
+    </section> 
+    <p></p>
+    <p></p>
+
+    <section class="section">
+      <div class="container has-text-centered " >
+        <p style="color:rgb(247, 245, 245); font-size: 21px; font-family: 'Brush Script', cursive">Ensuring peace of mind for car owners with reliable insurance predictions powered by CNN.</p>
+      </div>
+    </section>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+
+
+    
+  <section style="display: flex;justify-content: center;align-items: center;">
+      <div class="container has-text-centered bg-text" style="width: 40%; border-radius: 10px;" id="fourth">
+        <p class="subtitle">
+          Check your insurance amount with brand!
+        </p>
+        <div >
+          <i class="arrow_down"></i>
+          <form action="/classify_brand" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%; text-align: center; margin: auto;">
+            <div class="file has-name is-centered">
+              <label class="file-label">
+                <input class="file-input" type="file" id="image" name="image">
+                <span class="file-cta">
+                  <span class="file-label">
+                    Upload an image
+                  </span>
+                </span>
+                <span class="file-name" id="file-name">
+                  No file chosen
+                </span>
+              </label>
+            </div>
+            <br>
+            <input type="submit" value="Classify brand" class="button is-black" name="image" id="classify_brand_button" style="font-size: 13px">
+          </form>
+        </div>
+      </div>
+    </section>
+    <p></p>
+    <p></p>
+
+    <div id="loading" class="container " >
+      <h4>Image tips:</h4>
+      <ul>
+        <li>Please upload an image focused on damage level or brand.</li>
+        <li>Try to contain most of the car in the picture unless it doesn't capture the damage well.</li>
+        <li>The maximum filesize is 10MB.</li>
+        <li>Only jpg, jpeg, gif, and png formats are currently supported.</li>
+      </ul>
+   </div>
+   <p></p>
+   <p></p>
